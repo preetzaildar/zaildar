@@ -4,12 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zaildar
+namespace anmol
 {
-    class Program
+    public class DelegateExercises
     {
-        static void Main(string[] args)
+        public delegate void MyDelgate();
+
+
+        void Method1()
         {
+
+            Console.WriteLine("Method1");
+            Console.ReadLine();
         }
+        public void Method2()
+        {
+            MyDelgate myDelgate = new MyDelgate(Method1);
+
+            myDelgate();
+        }
+
+
+
+
+
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
     }
 }
